@@ -3,6 +3,11 @@ from requests import Session
 
 from trunity_3_client.utils.url import Url, API_ROOT
 
+__all__ = [
+    'get_auth_token',
+    'initialize_session',
+    'initialize_session_from_creds',
+]
 
 def get_auth_token(login, password):
     url = Url(API_ROOT)
