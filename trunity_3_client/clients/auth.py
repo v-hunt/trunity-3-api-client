@@ -9,6 +9,7 @@ __all__ = [
     'initialize_session_from_creds',
 ]
 
+
 def get_auth_token(login, password):
     url = Url(API_ROOT)
     url.tail = 'authorization'
