@@ -23,13 +23,13 @@ class Url(object):
             return self._tail
 
     @tail.setter
-    def tail(self, value):
+    def tail(self, value: str):
         self._tail = value
 
     @property
-    def list(self):
+    def list(self) -> str:
         return urljoin(self._root, self.tail)
 
     @property
-    def detail(self):
+    def detail(self) -> str:
         return urljoin(self.list + '/', self._detail_prefix)
