@@ -1,7 +1,7 @@
 import requests
 from requests import Session
 
-from utils.url import Url, API_ROOT
+from trunity_3_client.utils.url import Url, API_ROOT
 
 
 def get_auth_token(login, password):
