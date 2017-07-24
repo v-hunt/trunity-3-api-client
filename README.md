@@ -1,9 +1,15 @@
 # API Client for Trunity 3 Learning Platform
 
 ## Installation
-
+You need Python3.5 in your system. We recommend to use a virtual environment:
 ```
-pip install <url-to-repo>
+virtualenv --python=python3.5 .env
+source .env/bin/activate
+```
+
+Then, when you virtual environment is activated, type:
+```
+pip install git+git://github.com/v-hunt/trunity-3-api-client.git
 ```
 
 **Note:** PyPi package will be added soon.
