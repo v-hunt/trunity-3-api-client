@@ -31,6 +31,9 @@ class TopicsListClient(object):
 
     def __init__(self, session):
         self._session = session
+        # TODO: add auth from creds
+        # TODO: make session auth optional
+        # TODO: make code DRY by creating base class
 
     def post(self, site_id, name, topic_id=None,
              short_name=None, description=None):
