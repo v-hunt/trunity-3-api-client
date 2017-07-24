@@ -1,11 +1,9 @@
-from distutils.core import setup
+from setuptools import setup, find_packages
 
 setup(
     name='trunity_3_client',
     version='0.1',
-    packages=[
-        'trunity_3_client',
-    ],
+    packages=find_packages(),
     install_requires=[
         'requests',
         'beautifulsoup4',
