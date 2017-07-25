@@ -60,3 +60,7 @@ client.topics.detail.get(topic_id)
 ### Available Clients Classes:
 - TopicsClient
 - ContentsClient
+
+## Version History
+
+- 0.1 - Added clients: TopicsClient, ContentsClient
