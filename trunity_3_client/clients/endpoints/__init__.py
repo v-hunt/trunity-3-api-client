@@ -6,3 +6,5 @@ from trunity_3_client.clients.endpoints.contents import (
     ResourceType,
     ResourceTypeError,
 )
+from trunity_3_client.clients.endpoints.terms import TermsClient
+

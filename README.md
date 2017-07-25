@@ -63,4 +63,9 @@ client.topics.detail.get(topic_id)
 
 ## Version History
 
-- 0.1 - Added clients: TopicsClient, ContentsClient
+#### 0.1
+- Added clients: TopicsClient, ContentsClient
+
+#### 0.2
+- Added clients: TermsClient
+--------------------------------------------------
