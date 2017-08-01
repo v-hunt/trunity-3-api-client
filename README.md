@@ -68,4 +68,7 @@ client.topics.detail.get(topic_id)
 
 #### 0.2
 - Added clients: TermsClient
+
+#### 0.2.1
+- Switch to PROD server
 --------------------------------------------------

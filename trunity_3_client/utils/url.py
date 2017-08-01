@@ -1,7 +1,7 @@
 from urllib.parse import urljoin
 
-API_ROOT = 'http://trunity.mkechinov.ru/api/v3/'  # STAGE environment
-# API_ROOT = 'http://trunity.org/api/v3/'         # PROD environment
+# API_ROOT = 'http://trunity.mkechinov.ru/api/v3/'  # STAGE environment
+API_ROOT = 'http://trunity.org/api/v3/'         # PROD environment
 URL_DETAIL_PREFIX = '{id}'
 
 
