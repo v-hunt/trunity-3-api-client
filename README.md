@@ -71,4 +71,7 @@ client.topics.detail.get(topic_id)
 
 #### 0.2.1
 - Switch to PROD server
+
+#### 0.3
+- Added clients: SitesClient
 --------------------------------------------------
