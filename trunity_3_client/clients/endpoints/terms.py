@@ -64,7 +64,7 @@ class TmpContentTermClient(object):
         return response.json()['content_term_id']
 
 
-class UpdateTmpContentTerm(object):
+class UpdateTmpContentTermClient(object):
     _url = base_url.list + '/update_tmp_content_term/{id}'
 
     def __init__(self, session):
@@ -85,3 +85,6 @@ class TermsClient(object):
 
     def __init__(self, session):
         self.list = TermsListClient(session)
+        self.content_terms = ContentTermsClient(session)
+        self.tmp_content_term = TmpContentTermClient(session)
+        self.update_tmp_content_term = UpdateTmpContentTermClient(session)
