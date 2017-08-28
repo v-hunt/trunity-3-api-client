@@ -74,4 +74,7 @@ client.topics.detail.get(topic_id)
 
 #### 0.3
 - Added clients: SitesClient
+
+### 0.4
+- Added various clients for Terms
 --------------------------------------------------
