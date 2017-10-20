@@ -12,6 +12,7 @@ class Client(object):
         self.contents = ContentsClient(self._session)
         self.terms = TermsClient(self._session)
         self.sites = SitesClient(self._session)
+        self.questions = QuestionsClient(self._session)
 
 
 

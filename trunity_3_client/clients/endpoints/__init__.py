@@ -12,3 +12,5 @@ from trunity_3_client.clients.endpoints.sites import (
     SiteType,
     SiteTypeError,
 )
+from trunity_3_client.clients.endpoints.questions import QuestionsClient
+
