@@ -213,7 +213,7 @@ class QuestionsClient(object):
     def create_numeric(self, questionnaire_id: str,
                        text: str,
                        answers: List[dict],
-                       separate: bool=False,
+                       separate: bool=False
                        ) -> str:
         """
         Example of json:
