@@ -1,11 +1,22 @@
 from typing import List
+from abc import ABC, abstractmethod
 
 from requests import Session
 
 from trunity_3_client.clients.endpoints import QuestionsClient
 
 
-class Answer(object):
+class AbstractAnswer(ABC):
+
+    @abstractmethod
+    def to_dict(self) -> dict:
+        pass
+
+    def __eq__(self, other):
+        return self.to_dict() == other.to_dict()
+
+
+class Answer(AbstractAnswer):
 
     def __init__(self, text: str, correct: bool, score: int,
                  feedback: str="", ck_editor: bool=False):
@@ -25,7 +36,7 @@ class Answer(object):
         }
 
 
-class TrueFalseAnswer(object):
+class TrueFalseAnswer(AbstractAnswer):
 
     def __init__(self, correct: bool, type: bool, score: int, feedback: str=''):
         self.correct = correct
@@ -42,7 +53,7 @@ class TrueFalseAnswer(object):
         }
 
 
-class NumericAnswer(object):
+class NumericAnswer(AbstractAnswer):
 
     def __init__(self, correct: bool, tolerance: int, text: int, score: int,
                  feedback: str=''):
