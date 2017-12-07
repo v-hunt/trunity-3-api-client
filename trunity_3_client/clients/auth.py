@@ -25,17 +25,25 @@ def get_auth_token(login, password):
 
 
 def initialize_session(auth_token,
-                       content_type='multipart/form-data') -> Session:
+                       content_type=None) -> Session:
     session = requests.session()
-    session.headers.update({
-        'Authorization': auth_token,
-        'Accept': 'application/json',
-        'Content-Type': content_type,
-    })
+
+    if content_type:
+        session.headers.update({
+            'Authorization': auth_token,
+            'Accept': 'application/json',
+            'Content-Type': content_type,
+        })
+
+    else:
+        session.headers.update({
+            'Authorization': auth_token,
+            'Accept': 'application/json',
+        })
     return session
 
 
 def initialize_session_from_creds(login, password,
-                                  content_type='multipart/form-data') -> Session:
+                                  content_type=None) -> Session:
     auth_token = get_auth_token(login, password)
     return initialize_session(auth_token, content_type)
