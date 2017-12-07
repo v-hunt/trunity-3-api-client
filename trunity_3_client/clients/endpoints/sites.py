@@ -34,7 +34,8 @@ class SitesListClient(object):
                 "site_type must be one of {}".format(SiteType._CHOICES)
             )
 
-    def post(self, name: str, site_type: str, description) -> int:
+    def post(self, name: str,
+             site_type: str=SiteType.TEXTBOOK, description='') -> int:
         """
         Create site
 
@@ -75,4 +76,3 @@ class SitesClient(object):
 
     def __init__(self, session):
         self.list = SitesListClient(session)
-
