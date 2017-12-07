@@ -13,4 +13,5 @@ from trunity_3_client.clients.endpoints.sites import (
     SiteTypeError,
 )
 from trunity_3_client.clients.endpoints.questions import QuestionsClient
+from trunity_3_client.clients.endpoints.remote_files import FilesClient
 

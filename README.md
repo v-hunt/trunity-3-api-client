@@ -77,4 +77,7 @@ client.topics.detail.get(topic_id)
 
 ### 0.4
 - Added various clients for Terms
+
+### 0.6
+- Added client for Files
 --------------------------------------------------
