@@ -11,7 +11,7 @@ class FilesListClient(object):
     def __init__(self, session):
         self._session = session
 
-    def post(self, remote_file_url: str=None, file_path=None) -> str:
+    def post(self, remote_file_url: str=None, file_path=None, file_obj=None) -> str:
         """
         Upload a file.
         (extension white list: jpg jpeg gif png doc pdf)
@@ -20,6 +20,7 @@ class FilesListClient(object):
         """
 
         if remote_file_url:
+
             data = {
                 'remote_file[remote_file_url]': remote_file_url,
             }
@@ -31,9 +32,14 @@ class FilesListClient(object):
                 files = {'remote_file[file]': file_object}
                 response = self._session.post(self._url, files=files)
 
+        elif file_obj:
+
+            files = {'remote_file[file]': file_obj}
+            response = self._session.post(self._url, files=files)
+
         else:
             raise ValueError(
-                "You should set either remote_file_url or file_path!"
+                "You should set either remote_file_url, file_path or file_obj!"
             )
 
         response.raise_for_status()
